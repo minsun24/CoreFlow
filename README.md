@@ -304,3 +304,8 @@ My Local Diary는 이러한 흐름을 반영해, 누구나 개인화된 로컬 �
   -
  
 ---
+## 프로젝트 이동
+
+[프론트엔드](https://github.com/2TEAM-Ideality/be14-final-Ideality-CoreFlow-front)
+
+[백엔드](https://github.com/2TEAM-Ideality/be14-final-Ideality-CoreFlow-back)
