@@ -166,7 +166,7 @@ My Local Diary는 이러한 흐름을 반영해, 누구나 개인화된 로컬 �
 
 <br>
 
-## 프로젝트 기획
+## 🗂 프로젝트 기획
 <details>
 <summary>프로젝트 기획서</summary>
   <a href="https://github.com/2TEAM-Ideality/be14-final-Ideality-CoreFlow/blob/main/%EC%82%B0%EC%B6%9C%EB%AC%BC/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B8%B0%ED%9A%8D%EC%84%9C.pdf">프로젝트 기획서</a>
@@ -182,7 +182,7 @@ My Local Diary는 이러한 흐름을 반영해, 누구나 개인화된 로컬 �
   <a href="https://github.com/2TEAM-Ideality/be14-final-Ideality-CoreFlow/blob/main/%EC%82%B0%EC%B6%9C%EB%AC%BC/%EC%9D%B4%EC%83%81_Document%20-%20%ED%8C%8C%EC%9D%B4%EB%84%90-WBS.pdf">WBS</a>
 </details>
 
-## 프로젝트 설계
+## 🗂 프로젝트 설계
 
 <details>
 <summary>ERD</summary>
