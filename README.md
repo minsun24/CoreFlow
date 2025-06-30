@@ -191,7 +191,6 @@ My Local Diary는 이러한 흐름을 반영해, 누구나 개인화된 로컬 �
 
 <details>
 <summary>화면 설계서</summary>
-  <a href="https://www.figma.com/design/hKoKLeHYhWtY2Nf3V8GrUZ/%EC%9D%B4%EC%83%81_Final_Project?node-id=4-2&p=f&t=vmRoePTNrlhnKuvc-0">화면 설계서</a>
 </details>
 
 <details>
