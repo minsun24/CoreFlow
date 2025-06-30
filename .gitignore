@@ -6,12 +6,17 @@
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # 설정 파일
-application-*.yml
-*.properties
+**/application-*.xml
+**.properties
+**/src/main/resources/templates/
+**/src/main/resources/sql/
+**/src/main/resources/fonts/
+**/src/main/resources/static/
+**/.env
 !gradle/wrapper/gradle-wrapper.properties
 
 # User-specific stuff
-.idea/**/workspace.xml
+.idea/**/workspace.xm
 .idea/**/tasks.xml
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
@@ -20,9 +25,7 @@ application-*.yml
 # AWS User-specific
 .idea/**/aws.xml
 
-application-*.yml
-.github/workflows/build-deploy.yml
-
+**/.github/workflows/build-deploy.yml
 # Generated files
 .idea/**/contentModel.xml
 
