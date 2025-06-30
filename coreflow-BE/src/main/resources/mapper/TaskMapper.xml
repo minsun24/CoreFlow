@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ideality.coreflow.project.query.mapper.TaskMapper">
+
+    <resultMap id="TaskResultMap" type="com.ideality.coreflow.project.query.dto.SelectTaskDTO" >
+        <id property="taskId" column="id" />
+        <result property="description" column="description"/>
+        <result property="taskName" column="task_name"/>
+        <result property="startBaseLine" column="start_base"/>
+        <result property="endBaseLine" column="end_base"/>
+        <result property="expectStartDate" column="start_expect"/>
+        <result property="expectEndDate" column="end_expect"/>
+        <result property="startReal" column="start_real"/>
+        <result property="endReal" column="end_real"/>
+        <result property="progressRate" column="progress_rate"/>
+        <result property="passedRate" column="passed_rate"/>
+        <result property="delayDay" column="delay_days"/>
+        <result property="status" column="status"/>
+        <result property="projectName" column="project_name"/>
+        <result property="projectId" column="project_id"/>
+    </resultMap>
+
+    <resultMap id="TasksMap" type="com.ideality.coreflow.project.query.dto.ResponseTaskDTO">
+        <id property="id" column="id" />
+        <result property="label" column="name"/>
+        <result property="description" column="description"/>
+        <result property="startBaseLine" column="start_base"/>
+        <result property="endBaseLine" column="end_base"/>
+        <result property="slackTime" column="slack_time"/>
+    </resultMap>
+
+    <select id="selectTaskInfo" parameterType="map" resultMap="TaskResultMap">
+        SELECT
+               a.id
+             , a.name AS task_name
+             , a.description
+             , a.start_base
+             , a.end_base
+             , a.start_expect
+             , a.end_expect
+             , a.start_real
+             , a.end_real
+             , a.progress_rate
+             , a.passed_rate
+             , a.delay_days
+             , a.status
+             , a.project_id
+             , b.name AS project_name
+          FROM work a
+          JOIN project b ON a.project_id = b.id
+         WHERE a.id = #{taskId}
+           AND a.status != 'DELETED'
+           AND a.parent_task_id IS NULL
+    </select>
+
+    <select id="selectTasks" parameterType="map" resultMap="TasksMap">
+        SELECT
+               a.id
+             , a.name
+             , a.description
+             , a.start_base
+             , a.end_base
+             , a.slack_time
+          FROM work a
+          JOIN project b ON a.project_id = b.id
+         WHERE b.id = #{projectId}
+           AND a.parent_task_id IS NULL
+           AND a.status != 'DELETED'
+    </select>
+
+    <select id="selectProjectIdByTaskId" resultType="long">
+        SELECT
+               project_id
+          FROM work
+         WHERE id = #{taskId}
+           AND parent_task_id IS NULL
+    </select>
+
+    <select id="countIncompleteTasks" parameterType="long" resultType="int">
+        SELECT
+               COUNT(*)
+          FROM work
+         WHERE project_id = #{projectId}
+           AND status IN ('PENDING', 'PROGRESS')
+    </select>
+
+    <select id="selectTaskNameByTaskId" resultType="string">
+        SELECT
+               name
+          FROM work
+         WHERE id = #{taskId}
+           AND status != 'DELETED'
+    </select>
+
+
+    <select id="selectCompletedTasks" parameterType="long" resultType="com.ideality.coreflow.project.query.dto.CompletedTaskDTO">
+        SELECT
+            id AS taskId
+            , name AS taskName
+            , description
+            , created_at AS createdAt
+            , start_base AS startBase
+            , end_base AS endBase
+            , start_expect AS startExpect
+            , end_expect AS endExpect
+            , start_real AS startReal
+            , end_real AS endReal
+            , status
+            , progress_rate AS progressRate
+            , passed_rate AS passedRate
+            , delay_days AS delayDays
+            , NULL AS slackTime
+        FROM work
+        WHERE project_id = #{projectId}
+        AND parent_task_id IS NULL
+        AND status = 'COMPLETED'
+    </select>
+
+    <select id="selectTaskProgressByProjectId" resultType="com.ideality.coreflow.project.query.dto.WorkProgressDTO">
+        SELECT
+               start_base    AS startDate
+             , end_base      AS endDate
+             , progress_rate AS progressRate
+          FROM work
+         WHERE project_id = #{projectId}
+           AND parent_task_id IS NULL
+           AND status != 'DELETED'
+    </select>
+
+    <resultMap id="GanttTaskWithPredecessorsMap" type="com.ideality.coreflow.project.query.dto.GanttTaskResponse">
+        <id property="taskId" column="task_id"/>
+        <result property="taskName" column="task_name"/>
+        <result property="startBase" column="start_base"/>
+        <result property="endBase" column="end_base"/>
+        <result property="startDate" column="start_date"/>
+        <result property="endDate" column="end_date"/>
+        <result property="progress" column="progress"/>
+        <result property="status" column="status"/>
+        <result property="delayDays" column="delay_days"/>
+        <result property="isChild" column="is_child"/>
+
+        <collection property="predecessor" ofType="java.lang.Long">
+            <result column="prev_work_id"/>
+        </collection>
+
+        <collection property="resources" ofType="java.lang.Long">
+            <result column="dept_id"/>
+        </collection>
+    </resultMap>
+    <select id="selectRootTasksByProjectId" resultMap="GanttTaskWithPredecessorsMap">
+        SELECT
+               w.id AS task_id
+             , w.name AS task_name
+             , w.start_base
+             , w.end_base
+             , w.progress_rate AS progress
+             , CASE
+                 WHEN w.status = 'PENDING' THEN w.start_expect
+                 WHEN w.status IN ('PROGRESS', 'COMPLETED') THEN w.start_real
+               END AS start_date
+             , CASE
+                 WHEN w.status IN ('PENDING', 'PROGRESS') THEN w.end_expect
+                 WHEN w.status = 'COMPLETED' THEN w.end_real
+                 ELSE NULL
+               END AS end_date
+             , r.prev_work_id
+             , w.status AS status
+             , w.delay_days AS delay_days
+             , CASE
+                 WHEN w.parent_task_id IS NULL THEN FALSE
+                 ELSE TRUE
+               END AS is_child
+             , d.id AS dept_id
+             , d.name AS dept_name
+          FROM work w
+          LEFT JOIN project p ON p.id = w.project_id
+          LEFT JOIN relation r ON w.id = r.next_work_id
+          LEFT JOIN work_dept wd ON w.id = wd.work_id
+          LEFT JOIN dept d ON wd.dept_id = d.id
+         WHERE w.project_id = #{projectId}
+           AND w.parent_task_id IS NULL
+           AND w.status NOT IN ('DELETED', 'CANCELLED')
+         ORDER BY w.start_base
+    </select>
+
+    <select id="selectSubTasksByParentId" resultMap="GanttTaskWithPredecessorsMap">
+        SELECT
+               w.id AS task_id
+             , w.name AS task_name
+             , w.start_base AS start_base
+             , w.end_base AS end_base
+             , w.progress_rate AS progress
+             , CASE
+                 WHEN w.status = 'PENDING' THEN w.start_expect
+                 WHEN w.status IN ('PROGRESS', 'COMPLETED') THEN w.start_real
+               END AS start_date
+             , CASE
+                 WHEN w.status = 'PENDING' OR w.status = 'PROGRESS' THEN w.end_expect
+                 WHEN w.status = 'COMPLETED' THEN w.end_real
+                 ELSE Null
+               END AS end_date
+             , r.prev_work_id
+             , w.status AS status
+             , w.delay_days AS delay_days
+             , CASE
+                 WHEN w.parent_task_id IS NULL THEN FALSE
+                 ELSE TRUE
+               END AS is_child
+             , d.id AS dept_id
+          FROM work w
+          LEFT JOIN project p ON p.id = w.project_id
+          LEFT JOIN relation r ON w.id = r.next_work_id
+          LEFT JOIN work_dept wd ON w.id = wd.work_id
+          LEFT JOIN dept d ON wd.dept_id = d.id
+         WHERE parent_task_id = #{parentId}
+           AND w.status NOT IN ('DELETED', 'CANCELLED')
+         ORDER BY start_base
+    </select>
+
+    <select id="findTaskEndExpect" resultType="com.ideality.coreflow.project.query.dto.CheckTaskWarningDTO">
+        SELECT
+               w.end_expect AS taskEndExpect
+             , (
+                SELECT
+                       MAX(child.end_expect)
+                  FROM work child
+                 WHERE child.parent_task_id = #{taskId}
+                   AND child.status != 'DELETED'
+               ) AS subTaskEndExpect
+          FROM work w
+         WHERE w.id = #{taskId}
+
+    </select>
+
+<!--    <select id="findWorksDueToday" resultType="com.ideality.coreflow.project.command.domain.aggregate.Work">-->
+<!--        SELECT *-->
+<!--          FROM work-->
+<!--         WHERE project_id IN-->
+<!--                <foreach collection="projectIds" item="id" open="(" separator="," close=")">-->
+<!--                    #{id}-->
+<!--                </foreach>-->
+<!--           AND DATE(end_expect) = #{today}-->
+<!--    </select>-->
+    <select id="findWorksDueToday" resultType="com.ideality.coreflow.project.query.dto.WorkDueTodayDTO">
+        SELECT
+               w.id AS work_id
+             , w.name
+             , w.parent_task_id
+             , CASE
+               WHEN w.parent_task_id IS NULL THEN 'TASK'
+               ELSE 'SUBTASK'
+               END AS type
+          FROM work w
+          JOIN participant p
+            ON w.id = p.target_id
+         WHERE project_id IN
+                <foreach collection="projectIds" item="id" open="(" separator="," close=")">
+                    #{id}
+                </foreach>
+           AND DATE(end_expect) = #{today}
+           AND p.user_id = #{userId}
+           AND p.target_type IN ('TASK', 'DETAILED')
+    </select>
+
+    <select id="getNearDueSubtaskCount" resultType="long">
+        SELECT
+               COUNT(*)
+          FROM work
+         WHERE parent_task_id = #{taskId}
+           AND end_expect = #{now}
+    </select>
+
+</mapper>

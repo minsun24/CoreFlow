@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ideality.coreflow.comment.query.mapper.CommentMapper">
+
+    <!-- 파일 정보 조회 (일단 냅두기) -->
+    <resultMap id="CommentResultMap" type="com.ideality.coreflow.comment.query.dto.SelectCommentDTO" >
+        <id property="commentId" column="id" />
+        <result property="parentCommentId" column="parent_comment_id"/>
+        <result property="userId" column="user_id"/>
+        <result property="name" column="name"/>
+        <result property="profileImage" column="profile_image"/>
+        <result property="deptName" column="dept_name"/>
+        <result property="content" column="content"/>
+        <result property="createdAt" column="created_at"/>
+        <result property="isModify" column="is_modify"/>
+    </resultMap>
+
+    <resultMap id="CommentModifyResultMap" type="com.ideality.coreflow.comment.query.dto.ResponseCommentForModifyDTO" >
+        <id property="commentId" column="id" />
+        <result property="content" column="content"/>
+        <result property="isNotice" column="is_notice"/>
+        <result property="userId" column="user_id"/>
+    </resultMap>
+
+    <select id="selectComments" parameterType="map" resultMap="CommentResultMap">
+        SELECT
+               a.id
+             , a.parent_comment_id
+             , a.user_id
+             , b.name
+             , b.profile_image
+             , b.dept_name
+             , a.content
+             , a.created_at
+             , a.is_modify
+          FROM comment a
+          JOIN user b ON a.user_id = b.id
+         WHERE a.work_id = #{taskId}
+           AND a.is_deleted = false
+           AND a.type = 'COMMENT'
+           AND a.is_notice = false
+    </select>
+
+    <select id="selectCommentByModify" parameterType="map" resultMap="CommentModifyResultMap">
+        SELECT
+               id
+             , content
+             , is_notice
+             , user_id
+          FROM comment
+         WHERE id = #{commentId}
+           AND is_deleted = false
+    </select>
+
+    <select id="selectNotices" parameterType="map" resultMap="CommentResultMap">
+        SELECT
+        a.id
+        , a.parent_comment_id
+        , a.user_id
+        , b.name
+        , b.profile_image
+        , b.dept_name
+        , a.content
+        , a.created_at
+        , a.is_modify
+        FROM comment a
+        JOIN user b ON a.user_id = b.id
+        WHERE a.work_id = #{taskId}
+        AND a.is_deleted = false
+        AND a.type = 'NOTICE'
+        AND a.is_notice = true
+    </select>
+
+    <select id="selectAllComments" parameterType="long">
+        SELECT
+               id
+          FROM comment
+         WHERE work_id = #{taskId}
+    </select>
+</mapper>
