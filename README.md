@@ -196,7 +196,7 @@ My Local Diary는 이러한 흐름을 반영해, 누구나 개인화된 로컬 �
 
 <details>
   <summary>프로그램 사양서</summary>
-  <a href="https://www.notion.so/ohgiraffers/API-1ff649136c11819ebb31f39462e4f0f9">프로그램 사양서</a>
+  <a href="https://ohgiraffers.notion.site/API-1ff649136c11819ebb31f39462e4f0f9?pvs=73">프로그램 사양서</a>
 </details>
 
 <details>
