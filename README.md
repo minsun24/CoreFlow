@@ -169,31 +169,49 @@ My Local Diary는 이러한 흐름을 반영해, 누구나 개인화된 로컬 �
 ## 프로젝트 기획
 <details>
 <summary>프로젝트 기획서</summary>
+  <a href="https://github.com/2TEAM-Ideality/be14-final-Ideality-CoreFlow/blob/main/%EC%82%B0%EC%B6%9C%EB%AC%BC/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B8%B0%ED%9A%8D%EC%84%9C.pdf">프로젝트 기획서</a>
 </details>
 
 <details>
 <summary>요구사항 명세서</summary>
+  <a href="https://github.com/2TEAM-Ideality/be14-final-Ideality-CoreFlow/blob/main/%EC%82%B0%EC%B6%9C%EB%AC%BC/%EC%9D%B4%EC%83%81_Document%20-%20%ED%8C%8C%EC%9D%B4%EB%84%90-%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%20%EB%AA%85%EC%84%B8%EC%84%9C.pdf">요구사항 명세서</a>
 </details>
 
 <details>
 <summary>WBS</summary>
+  <a href="https://github.com/2TEAM-Ideality/be14-final-Ideality-CoreFlow/blob/main/%EC%82%B0%EC%B6%9C%EB%AC%BC/%EC%9D%B4%EC%83%81_Document%20-%20%ED%8C%8C%EC%9D%B4%EB%84%90-WBS.pdf">WBS</a>
 </details>
 
 ## 프로젝트 설계
+
 <details>
-<summary>ERD</summay>
+<summary>ERD</summary>
+  <a href="https://github.com/2TEAM-Ideality/be14-final-Ideality-CoreFlow/blob/main/%EC%82%B0%EC%B6%9C%EB%AC%BC/ERD.png">ERD</a>
 </details>
 
 <details>
 <summary>화면 설계서</summary>
+  <a href="https://www.figma.com/design/hKoKLeHYhWtY2Nf3V8GrUZ/%EC%9D%B4%EC%83%81_Final_Project?node-id=4-2&p=f&t=vmRoePTNrlhnKuvc-0">화면 설계서</a>
+</details>
+
+<details>
+  <summary>프로그램 사양서</summary>
+  <a href="https://www.notion.so/ohgiraffers/API-1ff649136c11819ebb31f39462e4f0f9">프로그램 사양서</a>
 </details>
 
 <details>
 <summary>🕹️ 시스템 아키텍쳐</summary>
+  <a href="https://github.com/2TEAM-Ideality/be14-final-Ideality-CoreFlow/blob/main/%EC%82%B0%EC%B6%9C%EB%AC%BC/core-flow-architecture.drawio_2.png">시스템 아키텍쳐
 </details>
 
 <details>
 <summary>🔄 CI / CD</summary>
+  <a href="https://ohgiraffers.notion.site/CI-CD-21f649136c1180758569e7f7974cfb85?pvs=73">CI / CD 계획서</a>
+</details>
+
+<details>
+  <summary>단위 테스크 결과서</summary>
+  <a href="https://documenter.getpostman.com/view/43225655/2sB2xFgTc9">단위 테스트 결과서</a>
 </details>
 
 ## 📝 팀원별 회고 모음
