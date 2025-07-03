@@ -1,40 +1,39 @@
-# be14-final-Ideality-CoreFlow
-| 이혜영 | 정민선 | 정동한 | 권민수 | 장시원 |
-|--------|--------|--------|--------|--------|
-| <div align="center"><img src="https://github.com/user-attachments/assets/f589b013-0193-4775-a908-76305427112c" width="150"><br>ISTP</div> | <div align="center"><img src="https://github.com/user-attachments/assets/2a9c8c91-0afa-4fa0-b10c-f4ad94bd9a09" width="150"><br>INFJ</div> | <div align="center"><img src="https://github.com/user-attachments/assets/05d7d9de-3c77-4243-a553-fcfb24abc6e9" width="150"><br>ISTP</div> | <div align="center"><img src="https://github.com/user-attachments/assets/b695d9dc-9885-4731-9c6a-6dde1add62f9" width="150"><br>ISTP</div> | <div align="center"><img src="https://item.kakaocdn.net/do/eda86b27d953e0a1bc89848fff989e65f604e7b0e6900f9ac53a43965300eb9a" width="150"><br>INTJ</div> |
+# 🧭 Core Flow
+![image](https://github.com/user-attachments/assets/a7ebb0be-58bb-4c90-8be7-1cdcc02a54d0)
 
 <br>
 
+## 유동성 있는 일정 관리를 위한 ERP 시스템 : Core Flow💡 
 
-## 📚 목차
+🔹 **Core – 핵심을 놓치지 않는 시스템** <br>
+   > 프로젝트 기반 기업에서는 핵심 일정과 주요 업무 흐름을 놓치지 않는 것이 중요합니다. <br>
+CoreFlow는 복잡한 프로젝트 속에서도 우선순위가 높은 일정, 중요한 프로세스 흐름을 중심에 두고 설계되었습니다.
+
+🔹 **Flow – 유동적인 업무 흐름과 일정** <br>
+> 실제 현장에서는 계획된 일정이 그대로 흘러가지 않는 경우가 많습니다. <br>
+CoreFlow는 유연하게 바뀌는 일정과 업무 상황에 실시간으로 반응하며 직관적인 흐름(view)으로 업무 변화를 빠르게 파악하고 조정할 수 있게 돕습니다.
+
+<br>
+
+## 🎯 CoreFlow는 이런 기업을 위해 설계되었습니다.
+> **CoreFlow는 프로젝트 중심 기업을 위한 ERP입니다.** <br>
+
+🔹 프로젝트 중심으로 운영되는 팀 또는 기업 <br>
+🔹 팀 간 협업과 일정 조율이 복잡하고 자주 바뀌는 환경 <br>
+🔹 Gantt, Pipeline 등 프로세스 시각화를 통해 한눈에 업무 흐름을 보고 싶은 기업 <br>
 
 
-#### [📌 프로젝트 개요](#-프로젝트-개요)  <br>
-#### [🧠 기획 의도](#-기획-의도)  <br>
-#### [🚀 서비스 주요 기능](#-서비스-주요-기능)  <br>
-#### [🛠 기술 스택](#-기술-스택)  <br>
-#### [🌐 외부 API 및 주요 구현 기술](#-외부-api-및-주요-구현-기술)  <br>
-#### [🗂 프로젝트 기획](#-프로젝트-기획)  <br>
-#### [🗂 프로젝트 설계](#-프로젝트-설계)  <br>
-#### [📝 팀원별 회고 모음](#-팀원별-회고-모음)  <br>
+<br>
+- 기획 배경
+
+변화하는 업무 일정과 협업 프로세스를 직관적인 흐름으로 시각화하여,
+핵심 업무를 놓치지 않고 유연하게 관리할 수 있도록 돕습니다.
 
 
 
 <br><br>
 
-## 📌 프로젝트 개요
-
-
-![image](https://github.com/user-attachments/assets/fd4c18b1-b4ac-48fd-be56-e764dd593bae)
-### CoreFlow 란? 
-
-My Local Diary는 **지도 기반의 소셜 네트워크 서비스(SNS)** 입니다. <br>
-
-사용자는 자신의 일상이나 여행 기록을 글, 사진, 음악 등으로 게시하고, 이를 지도 위의 마커(Marker) 형태로 표시할 수 있습니다. 또한, 다른 사용자의 게시글 역시 지도 상에서 확인 가능하여, 누가 언제 어디에 어떤 경험을 했는지 공간적으로 탐색할 수 있습니다.
-이 서비스를 통해 사용자는 단순한 타임라인이 아닌, ‘**지도 위에 나의 일상**’을 시각적으로 기록하고 공유할 수 있으며, 이를 바탕으로 **로컬 중심의 새로운 소셜** 연결을 경험하게 됩니다.
-
-
-<br><br>
+## 
 
 ## 🧠 기획 의도
 ```
@@ -166,6 +165,20 @@ My Local Diary는 이러한 흐름을 반영해, 누구나 개인화된 로컬 �
 
 <br>
 
+
+## 📚 목차
+
+
+#### [📌 프로젝트 개요](#-프로젝트-개요)  <br>
+#### [🧠 기획 의도](#-기획-의도)  <br>
+#### [🚀 서비스 주요 기능](#-서비스-주요-기능)  <br>
+#### [🛠 기술 스택](#-기술-스택)  <br>
+#### [🌐 외부 API 및 주요 구현 기술](#-외부-api-및-주요-구현-기술)  <br>
+#### [🗂 프로젝트 기획](#-프로젝트-기획)  <br>
+#### [🗂 프로젝트 설계](#-프로젝트-설계)  <br>
+#### [📝 팀원별 회고 모음](#-팀원별-회고-모음)  <br>
+
+
 ## 🗂 프로젝트 기획
 <details>
 <summary>프로젝트 기획서</summary>
@@ -214,6 +227,11 @@ My Local Diary는 이러한 흐름을 반영해, 누구나 개인화된 로컬 �
 </details>
 
 ## 📝 팀원별 회고 모음
+# be14-final-Ideality-CoreFlow
+| 이혜영 | 정민선 | 정동한 | 권민수 | 장시원 |
+|--------|--------|--------|--------|--------|
+| <div align="center"><img src="https://github.com/user-attachments/assets/f589b013-0193-4775-a908-76305427112c" width="150"><br>ISTP</div> | <div align="center"><img src="https://github.com/user-attachments/assets/2a9c8c91-0afa-4fa0-b10c-f4ad94bd9a09" width="150"><br>INFJ</div> | <div align="center"><img src="https://github.com/user-attachments/assets/05d7d9de-3c77-4243-a553-fcfb24abc6e9" width="150"><br>ISTP</div> | <div align="center"><img src="https://github.com/user-attachments/assets/b695d9dc-9885-4731-9c6a-6dde1add62f9" width="150"><br>ISTP</div> | <div align="center"><img src="https://item.kakaocdn.net/do/eda86b27d953e0a1bc89848fff989e65f604e7b0e6900f9ac53a43965300eb9a" width="150"><br>INTJ</div> |
+
 
 ### 🙋‍♀️ 팀원 이혜영 - @Hailyee
 
