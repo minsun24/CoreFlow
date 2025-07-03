@@ -265,6 +265,7 @@ CoreFlow는 **프론트엔드**와 **백엔드**가 분리된 구조로 개발�
 
 <details>
 <summary>화면 설계서</summary>
+  <a href="https://github.com/2TEAM-Ideality/be14-final-Ideality-CoreFlow/wiki/%ED%99%94%EB%A9%B4-%EC%84%A4%EA%B3%84%EC%84%9C">ERD</a>
 </details>
 
 <details>
