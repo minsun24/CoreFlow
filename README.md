@@ -433,14 +433,12 @@ CoreFlow는 **프론트엔드**와 **백엔드**가 분리된 구조로 개발�
 
  ---
 
- <br> <br> 
+ <br>
  
 <div align="center">
 
 🧭 **CoreFlow** - 유동성 있는 일정 관리를 위한 ERP 시스템  
-
-<br>
-
+<span></span>  
 Made by 💡 Team Ideality
 
 </div>
