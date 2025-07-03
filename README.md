@@ -248,13 +248,8 @@ CoreFlow는 **프론트엔드**와 **백엔드**가 분리된 구조로 개발�
 </details>
 
 <details>
-<summary>요구사항 명세서</summary>
-  <a href="https://github.com/2TEAM-Ideality/be14-final-Ideality-CoreFlow/blob/main/%EC%82%B0%EC%B6%9C%EB%AC%BC/%EC%9D%B4%EC%83%81_Document%20-%20%ED%8C%8C%EC%9D%B4%EB%84%90-%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%20%EB%AA%85%EC%84%B8%EC%84%9C.pdf">요구사항 명세서</a>
-</details>
-
-<details>
-<summary>WBS</summary>
-  <a href="https://github.com/2TEAM-Ideality/be14-final-Ideality-CoreFlow/blob/main/%EC%82%B0%EC%B6%9C%EB%AC%BC/%EC%9D%B4%EC%83%81_Document%20-%20%ED%8C%8C%EC%9D%B4%EB%84%90-WBS.pdf">WBS</a>
+<summary>프로젝트 문서</summary>
+  <a href="https://github.com/2TEAM-Ideality/be14-final-Ideality-CoreFlow/wiki/%EB%AC%B8%EC%84%9C">프로젝트 문서</a>
 </details>
 
 <br>
@@ -265,7 +260,7 @@ CoreFlow는 **프론트엔드**와 **백엔드**가 분리된 구조로 개발�
 
 <details>
 <summary>ERD</summary>
-  <a href="https://github.com/2TEAM-Ideality/be14-final-Ideality-CoreFlow/blob/main/%EC%82%B0%EC%B6%9C%EB%AC%BC/ERD.png">ERD</a>
+  <a href="https://github.com/2TEAM-Ideality/be14-final-Ideality-CoreFlow/wiki/ERD">ERD</a>
 </details>
 
 <details>
@@ -274,17 +269,17 @@ CoreFlow는 **프론트엔드**와 **백엔드**가 분리된 구조로 개발�
 
 <details>
   <summary>프로그램 사양서</summary>
-  <a href="https://ohgiraffers.notion.site/API-1ff649136c11819ebb31f39462e4f0f9?pvs=73">프로그램 사양서</a>
+  <a href="https://github.com/2TEAM-Ideality/be14-final-Ideality-CoreFlow/wiki/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8-%EC%82%AC%EC%96%91%EC%84%9C">프로그램 사양서</a>
 </details>
 
 <details>
 <summary>🕹️ 시스템 아키텍쳐</summary>
-  <a href="https://github.com/2TEAM-Ideality/be14-final-Ideality-CoreFlow/blob/main/%EC%82%B0%EC%B6%9C%EB%AC%BC/core-flow-architecture.drawio_2.png">시스템 아키텍쳐
+  <a href="https://github.com/2TEAM-Ideality/be14-final-Ideality-CoreFlow/wiki/%EC%8B%9C%EC%8A%A4%ED%85%9C-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98">시스템 아키텍쳐
 </details>
 
 <details>
 <summary>🔄 CI / CD</summary>
-  <a href="https://ohgiraffers.notion.site/CI-CD-21f649136c1180758569e7f7974cfb85?pvs=73">CI / CD 계획서</a>
+  <a href="https://github.com/2TEAM-Ideality/be14-final-Ideality-CoreFlow/wiki/CI-CD">CI / CD 계획서</a>
 </details>
 
 <details>
