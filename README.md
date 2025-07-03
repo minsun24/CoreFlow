@@ -65,6 +65,23 @@ CoreFlow는 유연하게 바뀌는 일정과 업무 상황에 실시간으로 �
 
 --- 
 
+## 🚀 프로젝트 이동
+
+CoreFlow는 **프론트엔드**와 **백엔드**가 분리된 구조로 개발되었으며,  
+아래 링크를 통해 각 레포지토리 및 실제 배포 사이트에 접근할 수 있습니다.
+
+<br >
+
+#### 🖥️ 프론트엔드 레포지토리 : [GitHub - CoreFlow Frontend](https://github.com/2TEAM-Ideality/be14-final-Ideality-CoreFlow-front)
+
+#### 🛠️ 백엔드 레포지토리 : [GitHub - CoreFlow Backend](https://github.com/2TEAM-Ideality/be14-final-Ideality-CoreFlow-back)
+
+#### 🌐 실제 배포 사이트 : [🔗 core-flow.site](https://core-flow.site)
+
+
+<br>
+
+---
 
 ## 📚 목차
 
@@ -240,6 +257,10 @@ CoreFlow는 유연하게 바뀌는 일정과 업무 상황에 실시간으로 �
   <a href="https://github.com/2TEAM-Ideality/be14-final-Ideality-CoreFlow/blob/main/%EC%82%B0%EC%B6%9C%EB%AC%BC/%EC%9D%B4%EC%83%81_Document%20-%20%ED%8C%8C%EC%9D%B4%EB%84%90-WBS.pdf">WBS</a>
 </details>
 
+<br>
+
+---
+
 ## 🗂 프로젝트 설계
 
 <details>
@@ -271,12 +292,18 @@ CoreFlow는 유연하게 바뀌는 일정과 업무 상황에 실시간으로 �
   <a href="https://documenter.getpostman.com/view/43225655/2sB2xFgTc9">단위 테스트 결과서</a>
 </details>
 
+<br> 
+
+---
+
 ## 📝 팀원별 회고 모음
-# be14-final-Ideality-CoreFlow
+
 | 이혜영 | 정민선 | 정동한 | 권민수 | 장시원 |
 |--------|--------|--------|--------|--------|
-| <div align="center"><img src="https://github.com/user-attachments/assets/f589b013-0193-4775-a908-76305427112c" width="150"><br>ISTP</div> | <div align="center"><img src="https://github.com/user-attachments/assets/2a9c8c91-0afa-4fa0-b10c-f4ad94bd9a09" width="150"><br>INFJ</div> | <div align="center"><img src="https://github.com/user-attachments/assets/05d7d9de-3c77-4243-a553-fcfb24abc6e9" width="150"><br>ISTP</div> | <div align="center"><img src="https://github.com/user-attachments/assets/b695d9dc-9885-4731-9c6a-6dde1add62f9" width="150"><br>ISTP</div> | <div align="center"><img src="https://item.kakaocdn.net/do/eda86b27d953e0a1bc89848fff989e65f604e7b0e6900f9ac53a43965300eb9a" width="150"><br>INTJ</div> |
+| <div align="center"><img src="https://github.com/user-attachments/assets/f589b013-0193-4775-a908-76305427112c" width="180"><br>ISTP</div> | <div align="center"><img src="https://github.com/user-attachments/assets/2a9c8c91-0afa-4fa0-b10c-f4ad94bd9a09" width="180"><br>INFJ</div> | <div align="center"><img src="https://github.com/user-attachments/assets/05d7d9de-3c77-4243-a553-fcfb24abc6e9" width="180"><br>ISTP</div> | <div align="center"><img src="https://github.com/user-attachments/assets/b695d9dc-9885-4731-9c6a-6dde1add62f9" width="180"><br>ISTP</div> | <div align="center"><img src="https://item.kakaocdn.net/do/eda86b27d953e0a1bc89848fff989e65f604e7b0e6900f9ac53a43965300eb9a" width="180"><br>INTJ</div> |
 
+
+<br>
 
 ### 🙋‍♀️ 팀원 이혜영 - @Hailyee
 
@@ -383,9 +410,3 @@ CoreFlow는 유연하게 바뀌는 일정과 업무 상황에 실시간으로 �
 - **다음 프로젝트에 적용하고 싶은 점**
   -
  
----
-## 프로젝트 이동
-
-[프론트엔드](https://github.com/2TEAM-Ideality/be14-final-Ideality-CoreFlow-front)
-
-[백엔드](https://github.com/2TEAM-Ideality/be14-final-Ideality-CoreFlow-back)
